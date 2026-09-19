@@ -1,5 +1,5 @@
 import os
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, model_validator, ValidationError
 from typing import Literal
 class Config(BaseModel):
    model: str = "gemini-3.6-flash"
