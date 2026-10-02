@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>RoMountainAgent - Mountain Guide</title>
+  <meta name="description" content="Intelligent mountain guide for Romanian Carpathians hiking routes.">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#090d16">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/style.css?v=2.2">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-title-group">
+      <h1>RoMountainAgent</h1>
+      <p>Carpathian Mountain Guide</p>
+    </div>
+    <div class="header-actions">
+      <button id="clearBtn" class="btn-icon" title="Reset Session Memory">Reset Chat</button>
+    </div>
+  </header>
+
+  <!-- Quick Action Chips -->
+  <nav class="quick-chips-bar" aria-label="Quick Queries">
+    <button class="chip-btn" data-action="salvamont">Salvamont Rules</button>
+    <button class="chip-btn" data-action="saved">Download Last Dossier</button>
+  </nav>
+
+  <!-- Chat Stream -->
+  <main id="chatContainer" class="chat-container" role="log" aria-live="polite">
+    <!-- Messages injected by app.js -->
+  </main>
+
+  <!-- Status Indicator -->
+  <div id="statusIndicator" class="status-indicator"></div>
+
+  <!-- Bottom Message Input Form -->
+  <footer class="input-area">
+    <form id="chatForm" class="input-form">
+      <input
+        type="text"
+        id="messageInput"
+        class="input-box"
+        placeholder="Ask about a route, weather, or Salvamont rules..."
+        autocomplete="off"
+        required
+      >
+      <button type="submit" id="sendBtn" class="btn-primary">Send</button>
+      <button type="button" id="stopBtn" class="btn-danger" style="display: none;">Stop</button>
+    </form>
+  </footer>
+
+  <!-- Passcode Security Modal -->
+  <div id="authModal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <h2>Private Guide Access</h2>
+      <p>Enter the private access passcode to use RoMountainAgent.</p>
+      <input
+        type="password"
+        id="passcodeInput"
+        placeholder="Enter Passcode"
+        autocomplete="current-password"
+      >
+      <button id="authSubmitBtn" class="btn-primary">Enter Guide</button>
+      <div id="authError" class="modal-error"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/app.js?v=2.2"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "RoMountainAgent - Mountain Guide",
+  "short_name": "RoMountain",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "description": "Intelligent mountain guide for Romanian Carpathians hiking routes."
+}

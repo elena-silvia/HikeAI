@@ -2,7 +2,7 @@ import os
 from pydantic import BaseModel, model_validator, ValidationError
 from typing import Literal
 class Config(BaseModel):
-   model: str = "gemini-3.6-flash"
+   model: str = "gemini-3.5-flash-lite"
    knowledge_source: Literal["local"] = "local"
    local_knowledge_directory: str = "knowledge"
 
@@ -25,7 +25,7 @@ class Config(BaseModel):
 
 def load_config() -> Config:
     return Config(
-        model =os.getenv("MODEL", "gemini-3.6-flash"),
+        model =os.getenv("MODEL", "gemini-3.5-flash-lite"),
         knowledge_source =os.getenv("KNOWLEDGE_SOURCE", "local"),
         local_knowledge_directory =os.getenv("LOCAL_KNOWLEDGE_DIRECTORY", "knowledge")
     )
