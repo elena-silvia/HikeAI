@@ -103,7 +103,7 @@ To protect the AI agent and prevent unauthorized consumption of API tokens, the 
 - **Testing the Application**: The live server is testable and accessible on phones or desktop browsers for authorized users. Access passcodes are distributed privately by the author/administrator upon request.
 
 ### Running Locally for Testing:
-1. Clone the repository and configure your `.env` file (refer to `.env.example`).
+1. Clone the repository and configure your `.env` file.
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
